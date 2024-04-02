@@ -45,7 +45,7 @@ This notebook encapsulates our approach to deploying a machine learning model on
 
 ---
 
-## `lambda_function.py`
+## `lambda_function.py` (need to be updated) 
 
 This Python script is intended for deployment as an AWS Lambda function. The function's primary purpose is to interact with AWS S3, performing data management tasks upon the triggering of specific events. Key functionalities include:
 
