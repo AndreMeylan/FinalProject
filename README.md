@@ -1,13 +1,15 @@
 # FinalProject
+
 ---
+
 ### Section B - Team 6
 ## Team Members
-- 
--
-- 
--
--
-- 
+- Umberto Cirilli
+- Iñaki Galdiano
+- Ting Jin
+- Joel Pascal Kömen
+- Olaf Odinn Lesniak
+- André Olivier Meylan
 
 ---
 
