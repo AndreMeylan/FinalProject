@@ -134,4 +134,35 @@ While developing the `PredictionResult` Lambda function, we intended to preproce
 
 We are actively seeking solutions to handle large file preprocessing within the constraints of AWS Lambda's deployment package size limit. This challenge remains open, and we welcome contributions and ideas on how to resolve it.
 
+---
+
+# Future Development
+
+## Technical Improvements
+
+Moving forward, we plan to focus on the following enhancements to our XGBoost model for improved performance and accuracy:
+
+- **Model Metrics Analysis:** We will continuously monitor metrics to ensure that our model is performing optimally without overfitting. High AUC values, low log loss, and low error rates are indicators of our current model's robustness.
+
+- **Fine-Tuning:** Minor performance improvements have been noted with current fine-tuning efforts. Future fine-tuning will involve more granular adjustments and possibly employing more sophisticated techniques.
+
+- **Experiment with Diverse Models:** To further refine our predictions, we will experiment with building separate models for different demographic groups and employ a variety of machine learning models to compare performance.
+
+- **Feature Engineering:** Enhanced feature engineering strategies will be explored to capture more nuances within the data, which may lead to significant improvements in model performance.
+
+## Business Recommendations
+
+For the business aspect, our recommendations and considerations for the Spanish National Health System are:
+
+- **Deployment of Model:** We advocate for the deployment of our predictive model to identify at-risk individuals, which could result in substantial cost savings—potentially around EUR 2 billion.
+
+- **Data Consistency and Collection:** Future success hinges on the consistent and comprehensive collection of patient data. It's vital for healthcare professionals to maintain high data quality standards.
+
+- **Awareness and Training:** Training doctors and nurses to ensure data consistency and to recognize significant predictive features such as glucose levels is imperative.
+
+- **Incorporate Additional Data:** Incorporating smoking history into patient records could enhance model accuracy, given its known association with diabetes.
+
+- **Cost-Efficient Solutions:** As demonstrated with AWS, deploying such models can be both straightforward and cost-effective, making it a viable solution for large-scale healthcare systems.
+
+Each of these points represents a critical area for development from both a technical and a business standpoint. Together, they will guide our project's evolution, ensuring that it not only becomes more sophisticated technically but also remains aligned with the overarching business goals of reducing healthcare costs and improving patient outcomes.
 
