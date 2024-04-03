@@ -36,8 +36,7 @@ This project focuses on addressing a significant healthcare concern: the early i
 Diabetic patients incur high direct healthcare costs, significantly impacting the Spanish National Health System's budget. Early detection of diabetes risk states and subsequent lifestyle modifications can dramatically reduce the incidence of this condition. Our goal is to deploy a predictive model that identifies individuals at risk of developing diabetes, thus alleviating the economic strain on healthcare systems.
 
 <a name="architecture-diagram"></a>
-
-### Architecture Diagram
+## Architecture Diagram
 
 ### Overview
 
@@ -86,20 +85,20 @@ This notebook encapsulates our approach to deploying a machine learning model on
 
 ---
 
-## AWS Lambda Functions for Diabetes Risk Prediction
+### AWS Lambda Functions for Diabetes Risk Prediction
 
 ### Directory Overview
 
 This repository includes dedicated directories for AWS Lambda functions that are integral to managing and processing data for our diabetes risk prediction model.
 
-#### `Diabetes_storage` Directory
+### `Diabetes_storage` Directory
 
 Contains the Lambda function that interacts with our main data storage, the `Diabetes_storage` S3 bucket.
 
 - **`lambda_function.py`:** The Python script set up as an AWS Lambda function to handle data ingestion and management tasks triggered by new file uploads in the `Diabetes_storage` S3 bucket.
 - **`text event.txt`:** A mock event file that simulates the S3 `put` event for testing the Lambda function without an actual file upload.
 
-#### `PredictionResult` Directory
+### `PredictionResult` Directory
 
 This folder is designed to hold the results of our diabetes prediction model and includes:
 
