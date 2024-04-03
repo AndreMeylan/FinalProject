@@ -1,0 +1,14 @@
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "diabetesstorage"
+        },
+        "object": {
+          "key": "predictions/predictions.csv"
+        }
+      }
+    }
+  ]
+}
