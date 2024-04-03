@@ -1,8 +1,20 @@
-# FinalProject
+# Final Project - Diabetes Risk Prediction on AWS
+### Section B - Team 6
+
+---
+## Table of Contents
+1. [Team Members](#team-members)
+2. [Project Overview](#project-overview)
+3. [Problem Statement](#problem-statement)
+4. [AWS Architecture](#aws-architecture)
+5. [Repository Contents Summary](#repository-contents-summary)
+6. [AWS Lambda Functions for Diabetes Risk Prediction](#aws-lambda-functions-for-diabetes-risk-prediction)
+7. [Challenges and Troubleshooting](#challenges-and-troubleshooting)
+8. [Future Development](#future-development)
 
 ---
 
-### Section B - Team 6
+<a name="team-members"></a>
 ## Team Members
 - Umberto Cirilli
 - Iñaki Galdiano
@@ -13,16 +25,17 @@
 
 ---
 
-# Diabetes Risk Prediction on AWS
-
+<a name="project-overview"></a>
 ## Project Overview
 
 This project focuses on addressing a significant healthcare concern: the early identification of diabetes risk. Given the substantial direct healthcare costs associated with diabetic patients, which account for a considerable portion of the Spanish National Health System expenditure, there's an urgent need to mitigate the prevalence of this condition. Our solution leverages AWS services to deploy a machine learning model capable of predicting an individual's risk of developing diabetes based on various physical health indicators. This early detection system aims to facilitate prompt lifestyle adjustments and interventions, potentially reducing the financial and health burden of diabetes.
 
+<a name="problem-statement"></a>
 ## Problem Statement
 
 Diabetic patients incur high direct healthcare costs, significantly impacting the Spanish National Health System's budget. Early detection of diabetes risk states and subsequent lifestyle modifications can dramatically reduce the incidence of this condition. Our goal is to deploy a predictive model that identifies individuals at risk of developing diabetes, thus alleviating the economic strain on healthcare systems.
 
+<a name="aws-architecture"></a>
 ## AWS Architecture
 
 ### Architecture Diagram
@@ -57,6 +70,7 @@ This diagram represents the current state of our AWS-based architecture while al
 
 ---
 
+<a name="repository-contents-summary"></a>
 # Repository Contents Summary
 
 In this repository, you will find the following files, each contributing to our project's goal of predicting diabetes risk using AWS services:
@@ -114,6 +128,8 @@ For both Lambda functions:
 Each Lambda function is tailored to respond to specific S3 bucket events, ensuring that our data flow is managed correctly throughout the diabetes risk prediction pipeline.
 
 ---
+
+<a name="challenges-and-troubleshooting"></a>
 ## Challenges and Troubleshooting
 
 ### Issue with Pandas Library in AWS Lambda
@@ -136,6 +152,7 @@ We are actively seeking solutions to handle large file preprocessing within the 
 
 ---
 
+<a name="future-development"></a>
 # Future Development
 
 ## Technical Improvements
