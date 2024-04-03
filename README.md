@@ -171,15 +171,14 @@ Moving forward, we plan to focus on the following enhancements to our XGBoost mo
 
 For the business aspect, our recommendations and considerations for the Spanish National Health System are:
 
-- **Deployment of Model:** We advocate for the deployment of our predictive model to identify at-risk individuals, which could result in substantial cost savings—potentially around EUR 2 billion.
+To ensure the ongoing success and scalability of the model, the following considerations are crucial:
 
-- **Data Consistency and Collection:** Future success hinges on the consistent and comprehensive collection of patient data. It's vital for healthcare professionals to maintain high data quality standards.
+- **Data Collection:** The collection of reliable and comprehensive data on all patients is essential for the model to deliver accurate predictions.
+  
+- **Data Quality:** Healthcare professionals, especially doctors and nurses, must prioritize data quality, ensuring consistency and accuracy when recording patient information, such as glucose levels.
+  
+- **Feature Inclusion:** The inclusion of additional predictive features, such as patients' smoking history, is imperative. Smoking is a recognized risk factor for diabetes and should be considered in the model to improve prediction accuracy.
 
-- **Awareness and Training:** Training doctors and nurses to ensure data consistency and to recognize significant predictive features such as glucose levels is imperative.
+Incorporating these considerations into the model will enhance its effectiveness and utility in a real-world healthcare setting, providing a powerful tool for the Spanish National Health System to reduce the incidence and financial impact of diabetes.
 
-- **Incorporate Additional Data:** Incorporating smoking history into patient records could enhance model accuracy, given its known association with diabetes.
-
-- **Cost-Efficient Solutions:** As demonstrated with AWS, deploying such models can be both straightforward and cost-effective, making it a viable solution for large-scale healthcare systems.
-
-Each of these points represents a critical area for development from both a technical and a business standpoint. Together, they will guide our project's evolution, ensuring that it not only becomes more sophisticated technically but also remains aligned with the overarching business goals of reducing healthcare costs and improving patient outcomes.
-
+*Note: These recommendations are based on current model performance and projected healthcare trends. As the model is deployed and more data becomes available, these recommendations may evolve to reflect new insights and opportunities.*
