@@ -23,12 +23,37 @@ This project focuses on addressing a significant healthcare concern: the early i
 
 Diabetic patients incur high direct healthcare costs, significantly impacting the Spanish National Health System's budget. Early detection of diabetes risk states and subsequent lifestyle modifications can dramatically reduce the incidence of this condition. Our goal is to deploy a predictive model that identifies individuals at risk of developing diabetes, thus alleviating the economic strain on healthcare systems.
 
-### AWS Architecture
+## AWS Architecture
 
-![AWS Architecture Diagram]( put here the link once we have it)
+### Architecture Diagram
 
----
+#### Overview
 
+The repository includes a detailed architecture diagram that outlines the workflow and interaction between various AWS services used in our diabetes risk prediction model.
+
+![Architecture Diagram](https://github.com/AndreMeylan/FinalProject/blob/main/%20architecture_diagram.png)
+
+##### Workflow Description
+
+The architecture diagram illustrates the following key processes:
+
+1. **Data Ingestion:** Raw data uploaded to an S3 bucket is picked up by a SageMaker notebook instance for processing.
+   
+2. **Model Training:** The SageMaker notebook conducts preprocessing steps on the data and uses it to train the machine learning model.
+   
+3. **Model Deployment:** The trained model is deployed to a SageMaker endpoint for generating predictions based on new data.
+   
+4. **Prediction Handling:** A Lambda function retrieves new predictions from the S3 bucket and writes them to a DynamoDB table for persistent storage.
+   
+5. **API Integration (Future Implementation):** An API Gateway will be set up to trigger a Lambda function for making prediction requests, with the future potential to streamline the prediction retrieval process.
+
+##### Security and Access Control
+
+The diagram also highlights the use of AWS Identity and Access Management (IAM) to manage permissions and access control across all services, ensuring secure and authorized operations within the workflow.
+
+##### Current Status and Future Enhancements
+
+This diagram represents the current state of our AWS-based architecture while also indicating future enhancements such as the implementation of an API Gateway for improved request handling. As we continue to develop and refine our model, we anticipate further optimizations and additions to this architecture.
 
 ---
 
