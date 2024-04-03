@@ -122,9 +122,9 @@ While developing the `PredictionResult` Lambda function, we intended to preproce
 
 1. **Pandas Not Preinstalled:** AWS Lambda's default Python environment does not come with Pandas preinstalled.
    
-2. **Virtual Environment and Packaging:** To circumvent this, we installed Pandas in a virtual environment and created a deployment package (ZIP file). This package included our function code and the Pandas library.
+2. **Virtual Environment and Packaging:** To circumvent this, we installed Pandas in a virtual environment and created a deployment package. This package included our function code and the Pandas library.
 
-3. **Deployment Package Size Limitation:** When attempting to upload our ZIP file to the Lambda function, we encountered a size constraint. AWS Lambda requires the unzipped deployment package to be smaller than 262,144,000 bytes (250 MB).
+3. **Deployment Package Size Limitation:** When attempting to upload our file to the Lambda function, we encountered a size constraint. AWS Lambda requires the unzipped deployment package to be smaller than 262,144,000 bytes (250 MB).
 
 4. **Error Upon Uploading to S3 Bucket:** We tried to use an S3 bucket to store and reference the ZIP file. However, when the Lambda function attempted to use the Pandas library from the S3 bucket, we were met with the error: "Unzipped size must be smaller than 262144000 bytes."
 
