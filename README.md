@@ -29,6 +29,9 @@ Diabetic patients incur high direct healthcare costs, significantly impacting th
 
 ---
 
+
+---
+
 # Repository Contents Summary
 
 In this repository, you will find the following files, each contributing to our project's goal of predicting diabetes risk using AWS services:
@@ -45,13 +48,65 @@ This notebook encapsulates our approach to deploying a machine learning model on
 
 ---
 
-## `lambda_function.py` (need to be updated) 
+## AWS Lambda Functions for Diabetes Risk Prediction
 
-This Python script is intended for deployment as an AWS Lambda function. The function's primary purpose is to interact with AWS S3, performing data management tasks upon the triggering of specific events. Key functionalities include:
+### Directory Overview
 
-- **S3 Event Handling:** The function is triggered by events in an S3 bucket, such as the upload of new data files, to initiate processing.
-- **Data Transfer:** It contains logic to copy the data from a source bucket to a destination bucket, facilitating the flow of data within the AWS ecosystem.
-- **Error Handling:** The function is robustly designed with error handling to ensure graceful failure and provide informative error messages in case of exceptions.
+This repository includes dedicated directories for AWS Lambda functions that are integral to managing and processing data for our diabetes risk prediction model.
 
-This Lambda function is a crucial component of our data processing pipeline, ensuring seamless data movement and management for our diabetes risk prediction model.
+#### `Diabetes_storage` Directory
+
+Contains the Lambda function that interacts with our main data storage, the `Diabetes_storage` S3 bucket.
+
+- **`lambda_function.py`:** The Python script set up as an AWS Lambda function to handle data ingestion and management tasks triggered by new file uploads in the `Diabetes_storage` S3 bucket.
+- **`text event.txt`:** A mock event file that simulates the S3 `put` event for testing the Lambda function without an actual file upload.
+
+#### `PredictionResult` Directory
+
+This folder is designed to hold the results of our diabetes prediction model and includes:
+
+- **`lambda_function.py`:** A Python script that acts upon the trigger from the `PredictionResult` S3 bucket to process the incoming prediction results.
+- **`test event.txt`:** A test event file containing a JSON object that mimics the Lambda trigger for a new result file upload, allowing us to ensure that our function correctly handles new prediction data.
+
+### Usage Instructions
+
+For both Lambda functions:
+
+#### Deployment
+
+1. Log in to your AWS Management Console and navigate to the Lambda section.
+2. Click "Create function," choose "Author from scratch," and fill out the basic information including the function name and runtime (Python).
+3. In the "Function code" area, upload the respective `lambda_function.py` file for the function you are setting up.
+4. Under the "Designer" section, set the appropriate S3 bucket as the trigger, configuring it to react to object creation events.
+5. Save your Lambda function.
+
+#### Testing
+
+1. In the AWS Lambda console, open the function you wish to test.
+2. Click on the "Test" tab and configure a new test event using the content from the `text event.txt` file corresponding to the function.
+3. Name your test event and click "Test" to simulate the S3 event and verify the function's response.
+
+Each Lambda function is tailored to respond to specific S3 bucket events, ensuring that our data flow is managed correctly throughout the diabetes risk prediction pipeline.
+
+---
+## Challenges and Troubleshooting
+
+### Issue with Pandas Library in AWS Lambda
+
+While developing the `PredictionResult` Lambda function, we intended to preprocess the data using the Pandas library. However, we faced the following challenges:
+
+1. **Pandas Not Preinstalled:** AWS Lambda's default Python environment does not come with Pandas preinstalled.
+   
+2. **Virtual Environment and Packaging:** To circumvent this, we installed Pandas in a virtual environment and created a deployment package (ZIP file). This package included our function code and the Pandas library.
+
+3. **Deployment Package Size Limitation:** When attempting to upload our ZIP file to the Lambda function, we encountered a size constraint. AWS Lambda requires the unzipped deployment package to be smaller than 262,144,000 bytes (250 MB).
+
+4. **Error Upon Uploading to S3 Bucket:** We tried to use an S3 bucket to store and reference the ZIP file. However, when the Lambda function attempted to use the Pandas library from the S3 bucket, we were met with the error: "Unzipped size must be smaller than 262144000 bytes."
+
+5. **Alternatives to Pandas:** Given the file size limitation, we explored alternative methods to replace Pandas. Unfortunately, these attempts did not yield a successful outcome.
+
+### Current Status
+
+We are actively seeking solutions to handle large file preprocessing within the constraints of AWS Lambda's deployment package size limit. This challenge remains open, and we welcome contributions and ideas on how to resolve it.
+
 
