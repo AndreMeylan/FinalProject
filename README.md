@@ -36,7 +36,7 @@ Diabetic patients incur high direct healthcare costs, significantly impacting th
 
 In this repository, you will find the following files, each contributing to our project's goal of predicting diabetes risk using AWS services:
 
-## `ML_Model_Team_6_Final.ipynb`
+### `ML_Model_Team_6_Final.ipynb`
 
 This Jupyter Notebook is the core of our project, detailing the entire process from data retrieval to model training and evaluation. Key aspects include:
 
