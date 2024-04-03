@@ -126,7 +126,7 @@ While developing the `PredictionResult` Lambda function, we intended to preproce
 
 3. **Deployment Package Size Limitation:** When attempting to upload our file to the Lambda function, we encountered a size constraint. AWS Lambda requires the unzipped deployment package to be smaller than 262,144,000 bytes (250 MB).
 
-4. **Error Upon Uploading to S3 Bucket:** We tried to use an S3 bucket to store and reference the ZIP file. However, when the Lambda function attempted to use the Pandas library from the S3 bucket, we were met with the error: "Unzipped size must be smaller than 262144000 bytes."
+4. **Error Upon Uploading to S3 Bucket:** We tried to use an S3 bucket to store and reference the python file. However, when the Lambda function attempted to use the Pandas library from the S3 bucket, we were met with the error: "Unzipped size must be smaller than 262144000 bytes."
 
 5. **Alternatives to Pandas:** Given the file size limitation, we explored alternative methods to replace Pandas. Unfortunately, these attempts did not yield a successful outcome.
 
