@@ -6,7 +6,7 @@
 1. [Team Members](#team-members)
 2. [Project Overview](#project-overview)
 3. [Problem Statement](#problem-statement)
-4. [AWS Architecture](#aws-architecture)
+4. [Architecture Diagram](#architecture-diagram)
 5. [Repository Contents Summary](#repository-contents-summary)
 6. [AWS Lambda Functions for Diabetes Risk Prediction](#aws-lambda-functions-for-diabetes-risk-prediction)
 7. [Challenges and Troubleshooting](#challenges-and-troubleshooting)
@@ -35,18 +35,17 @@ This project focuses on addressing a significant healthcare concern: the early i
 
 Diabetic patients incur high direct healthcare costs, significantly impacting the Spanish National Health System's budget. Early detection of diabetes risk states and subsequent lifestyle modifications can dramatically reduce the incidence of this condition. Our goal is to deploy a predictive model that identifies individuals at risk of developing diabetes, thus alleviating the economic strain on healthcare systems.
 
-<a name="aws-architecture"></a>
-## AWS Architecture
+<a name="architecture-diagram"></a>
 
 ### Architecture Diagram
 
-#### Overview
+### Overview
 
 The repository includes a detailed architecture diagram that outlines the workflow and interaction between various AWS services used in our diabetes risk prediction model.
 
 ![Architecture Diagram](https://github.com/AndreMeylan/FinalProject/blob/main/%20architecture_diagram.png)
 
-##### Workflow Description
+#### Workflow Description
 
 The architecture diagram illustrates the following key processes:
 
@@ -60,11 +59,11 @@ The architecture diagram illustrates the following key processes:
    
 5. **API Integration (Future Implementation):** An API Gateway will be set up to trigger a Lambda function for making prediction requests, with the future potential to streamline the prediction retrieval process.
 
-##### Security and Access Control
+#### Security and Access Control
 
 The diagram also highlights the use of AWS Identity and Access Management (IAM) to manage permissions and access control across all services, ensuring secure and authorized operations within the workflow.
 
-##### Current Status and Future Enhancements
+#### Current Status and Future Enhancements
 
 This diagram represents the current state of our AWS-based architecture while also indicating future enhancements such as the implementation of an API Gateway for improved request handling. As we continue to develop and refine our model, we anticipate further optimizations and additions to this architecture.
 
