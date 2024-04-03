@@ -71,7 +71,7 @@ This diagram represents the current state of our AWS-based architecture while al
 ---
 
 <a name="repository-contents-summary"></a>
-# Repository Contents Summary
+## Repository Contents Summary
 
 In this repository, you will find the following files, each contributing to our project's goal of predicting diabetes risk using AWS services:
 
@@ -153,9 +153,9 @@ We are actively seeking solutions to handle large file preprocessing within the 
 ---
 
 <a name="future-development"></a>
-# Future Development
+## Future Development
 
-## Technical Improvements
+### Technical Improvements
 
 Moving forward, we plan to focus on the following enhancements to our XGBoost model for improved performance and accuracy:
 
@@ -167,7 +167,7 @@ Moving forward, we plan to focus on the following enhancements to our XGBoost mo
 
 - **Feature Engineering:** Enhanced feature engineering strategies will be explored to capture more nuances within the data, which may lead to significant improvements in model performance.
 
-## Business Recommendations
+### Business Recommendations
 
 For the business aspect, our recommendations and considerations for the Spanish National Health System are:
 
