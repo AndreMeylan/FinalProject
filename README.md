@@ -1,7 +1,8 @@
 # Final Project - Diabetes Risk Prediction on AWS
-### Section B - Team 6
+## Section B - Team 6
 
 ---
+
 ## Table of Contents
 1. [Team Members](#team-members)
 2. [Project Overview](#project-overview)
@@ -10,7 +11,7 @@
 5. [Repository Contents Summary](#repository-contents-summary)
 6. [AWS Lambda Functions for Diabetes Risk Prediction](#aws-lambda-functions-for-diabetes-risk-prediction)
 7. [Challenges and Troubleshooting](#challenges-and-troubleshooting)
-8. [Future Development](#future-development)
+8. [Future Development Roadmap](#future-development-roadmap)
 
 ---
 
@@ -152,33 +153,53 @@ We are actively seeking solutions to handle large file preprocessing within the 
 
 ---
 
-<a name="future-development"></a>
-## Future Development
+<a name="future-development-roadmap"></a>
+## Future Development Roadmap
 
-### Technical Improvements
+### To-Do List
 
-Moving forward, we plan to focus on the following enhancements to our XGBoost model for improved performance and accuracy:
+As we strive to enhance the current infrastructure and capabilities of our diabetes prediction model, we are prioritizing the following tasks:
 
-- **Model Metrics Analysis:** We will continuously monitor metrics to ensure that our model is performing optimally without overfitting. High AUC values, low log loss, and low error rates are indicators of our current model's robustness.
+1. **Pandas Library Integration:** We are exploring solutions to integrate the Pandas library within our AWS Lambda function without exceeding the package size limit. Potential strategies include the use of AWS Lambda Layers and alternative lightweight data processing libraries.
 
-- **Fine-Tuning:** Minor performance improvements have been noted with current fine-tuning efforts. Future fine-tuning will involve more granular adjustments and possibly employing more sophisticated techniques.
+2. **API Connectivity:**
+    - **Implement an API Gateway:** We plan to set up an API Gateway to provide a secure and robust interface for handling prediction requests and integrating with other systems.
+    - **Connect Lambda with API Gateway:** Our goal is to establish a seamless connection between AWS Lambda functions and the API Gateway, facilitating efficient data flow and management.
 
-- **Experiment with Diverse Models:** To further refine our predictions, we will experiment with building separate models for different demographic groups and employ a variety of machine learning models to compare performance.
+These immediate action items are aimed at resolving current limitations and setting the foundation for future enhancements.
 
-- **Feature Engineering:** Enhanced feature engineering strategies will be explored to capture more nuances within the data, which may lead to significant improvements in model performance.
+### Future Technical Improvements
 
-### Business Recommendations
+Looking beyond the immediate to-do list, we intend to implement the following technical improvements to the diabetes prediction model:
 
-For the business aspect, our recommendations and considerations for the Spanish National Health System are:
+- **Refining Model Metrics:** Ongoing monitoring and optimization of model metrics will ensure we avoid overfitting and maintain high predictive accuracy.
 
-To ensure the ongoing success and scalability of the model, the following considerations are crucial:
+- **Advanced Fine-Tuning:** Iterative fine-tuning processes, utilizing sophisticated techniques, will be conducted to progressively enhance model performance.
 
-- **Data Collection:** The collection of reliable and comprehensive data on all patients is essential for the model to deliver accurate predictions.
-  
-- **Data Quality:** Healthcare professionals, especially doctors and nurses, must prioritize data quality, ensuring consistency and accuracy when recording patient information, such as glucose levels.
-  
-- **Feature Inclusion:** The inclusion of additional predictive features, such as patients' smoking history, is imperative. Smoking is a recognized risk factor for diabetes and should be considered in the model to improve prediction accuracy.
+- **Diversifying Model Portfolio:** We will explore building separate models for different demographic groups and experiment with a range of machine learning models to improve predictive performance.
 
-Incorporating these considerations into the model will enhance its effectiveness and utility in a real-world healthcare setting, providing a powerful tool for the Spanish National Health System to reduce the incidence and financial impact of diabetes.
+- **Innovative Feature Engineering:** The adoption of advanced feature engineering techniques will be investigated to unlock further predictive insights within our data.
 
-*Note: These recommendations are based on current model performance and projected healthcare trends. As the model is deployed and more data becomes available, these recommendations may evolve to reflect new insights and opportunities.*
+### Future Business Recommendations
+
+From a business standpoint, our model's deployment aligns with strategic initiatives aimed at reducing healthcare costs and improving patient outcomes:
+
+- **Data Quality and Consistency:** It is essential to maintain high standards of data quality, with healthcare professionals ensuring consistent and accurate data recording.
+
+- **Inclusion of Predictive Features:** Incorporating additional risk factors, such as smoking history, into the model is critical to enhancing its predictive accuracy and utility.
+
+- **Cost-Effective Deployment:** Leveraging the AWS platform, we aim to demonstrate that our model can be deployed efficiently, offering a cost-effective solution for large-scale health systems.
+
+### Long-Term Considerations
+
+Our vision for long-term development includes:
+
+- **Comprehensive Data Collection:** The successful implementation of the model is contingent upon the collection of comprehensive and reliable patient data.
+
+- **Professional Training:** Healthcare professionals must receive training to ensure data is recorded consistently and accurately.
+
+- **Feature Expansion:** Adding key features known to influence diabetes risk, such as smoking history, will improve the model's predictive power.
+
+By addressing these technical and business aspects, we aim to deliver a model that not only excels in accuracy and efficiency but also provides significant value to the healthcare system.
+
+*Note: This roadmap is based on current model performance and projected healthcare trends. As the model is deployed and more data become available, these recommendations may evolve to reflect new insights and opportunities.*
